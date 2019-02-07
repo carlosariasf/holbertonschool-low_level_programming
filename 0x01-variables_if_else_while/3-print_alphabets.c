@@ -15,6 +15,10 @@ int main(void)
 	{
 	putchar(c);
 	}
+	for (c = 'A'; c <= 'Z'; c++)
+	{
+	putchar(c);
+	}
 	putchar(nl);
 
 	return (0);
