@@ -18,7 +18,7 @@ int main(void)
 	{
 		putchar(n);
 		putchar(n2);
-		if(c < 108)
+		if (c < 108)
 		{
 			putchar(',');
 			putchar(' ');
