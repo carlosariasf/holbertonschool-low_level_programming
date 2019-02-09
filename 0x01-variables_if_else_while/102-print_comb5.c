@@ -18,25 +18,26 @@ int main(void)
 	{
 	for (n2 = '0'; n2 <= '9'; n2++)
 	{
-	putchar(n);
-	putchar(n2);
-	putchar(' ');
 	for (n3 = '0'; n3 <= '9'; n3++)		
 	{
-
-		if (n <= n2 && n != n2)
+	for (n4 = '0'; n4 <= '9'; n4++)
+	{
+		if (n3 <= n4)
 		{
 		putchar(n);
 		putchar(n2);
-		c++;
-		if (c < 53)
+		putchar(' ');
+		putchar(n3);
+		putchar(n4);
+		if (c < 99)
 		{
-			putchar(',');
-			putchar(' ');
+		putchar(',');
+		putchar(' ');
 		}
 		}
 	}
-	c++;
+	}
+	}
 	}
 	putchar('\n');
 
