@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
  * print_last_digit - Init function
- * @n: Description of parameter r
+ * @n: Description of parameter n
  * Description: Longer description of the function)?
  * section header: Section description)*
  * Return: Description of the returned value
