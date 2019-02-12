@@ -21,7 +21,7 @@ int m2;
 			{
 				for (m2 = 0; m2 <= 9; m2++)
 				{
-				if (h != 2 && h2 != 3)
+				if (h < 2)
 				{
 				_putchar('0' + h);
 				_putchar('0' + h2);
@@ -30,7 +30,7 @@ int m2;
 				_putchar('0' + m2);
 				_putchar('\n');
 				}
-				else if (h == 2 && h2 == 3)
+				else if (h == 2 && h2 < 4)
 				{
 				_putchar('0' + h);
 				_putchar('0' + h2);
