@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
  * _islower - Init function
- * @c - param int
+ * @c: Description of parameter c
  * Description: Longer description of the function)?
  * section header: Section description)*
  * Return: Description of the returned value
