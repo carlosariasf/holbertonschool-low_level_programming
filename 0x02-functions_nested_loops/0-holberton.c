@@ -12,11 +12,11 @@ char n[] = "Holberton";
 int s = sizeof(n) - 1;
 int o;
 
-for(o = 0; o < s; o++)
+for (o = 0; o < s; o++)
 {
-_putchar(n[o]);
+	_putchar(n[o]);
 }
-_putchar('\n');
+	_putchar('\n');
 
 return (0);
 }
