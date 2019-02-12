@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "holberton.h"
 /**
  * main - Init function
 (* a blank line
@@ -8,7 +9,13 @@
  */
 int main(void)
 {
+int n[] = {'H', 'o', 'l', 'b', 'e', 'r', 't', 'o', 'n', '\n'};
+int s = sizeof(n), o;
 
-printf("%s", "Holberton\n");
+for(o = 0; o <= s; o++)
+{
+_putchar(n[o]);
+}
+
 return (0);
 }
