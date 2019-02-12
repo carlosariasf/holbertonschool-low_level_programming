@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
- * print_sign - Init function
- * @n: Description of parameter n
+ * _abs - Init function
+ * @r: Description of parameter r
  * Description: Longer description of the function)?
  * section header: Section description)*
  * Return: Description of the returned value
@@ -12,7 +12,8 @@ int _abs(int r)
 	{
 		r = r * -1;
 		return (r);
-	}else
+	}
+	else
 	{
 		r = r * 1;
 		return (r);
