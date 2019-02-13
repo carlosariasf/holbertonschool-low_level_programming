@@ -33,8 +33,8 @@ int h3;
 		else
 		{
 			_putchar(' ');
-			_putchar((h3/10)+'0');
-    			_putchar((h3%10)+'0');
+			_putchar((h3 / 10) + '0');
+			_putchar((h3 % 10) + '0');
 			if (h2 < 9)
 			{
 			_putchar(',');
