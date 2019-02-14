@@ -25,13 +25,16 @@ int c;
 		{
 		printf("%s", "Fizz ");
 		}
-		else if ((c % 5) == 0 && c > 0)
+		else if ((c % 5) == 0 && c > 0 && c < 100)
 		{
 		printf("%s", "Buzz ");
+		}
+		else
+		{
+		printf("%s", "Buzz");
 		}
 	}
 	printf("%c", '\n');
 
 return (0);
 }
-
