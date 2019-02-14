@@ -29,7 +29,7 @@ int c;
 		{
 		printf("%s", "Buzz ");
 		}
-		else
+		else if (c == 100)
 		{
 		printf("%s", "Buzz");
 		}
