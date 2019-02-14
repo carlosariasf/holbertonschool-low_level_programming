@@ -1,14 +1,14 @@
 #include "holberton.h"
 /**
- * print_diagonal - Init function
- * @n: Description of parameter n
+ * print_triangle - Init function
+ * @size: Description of parameter n
  * Description: Longer description of the function)?
  * section header: Section description)*
  * Return: Description of the returned value
  */
 void print_triangle(int size)
 {
-int c,b,a;
+int c, b, a;
 
 	if (size > 0)
 	{
