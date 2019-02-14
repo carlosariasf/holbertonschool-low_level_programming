@@ -8,7 +8,6 @@
 void print_to_98(int n)
 {
 	int o;
-
 	if (n < 98)
 	{
 	for (o = n; o <= 98; o++)
@@ -16,7 +15,7 @@ void print_to_98(int n)
 		if (o < 0)
 		{
 		_putchar('-');
-		_putchar('0' + (o * -1));
+		_putchar('0' + (-o));
 		}
 		else if (o < 10)
 		{
