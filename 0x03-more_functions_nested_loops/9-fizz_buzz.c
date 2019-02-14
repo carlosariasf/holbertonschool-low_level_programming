@@ -13,19 +13,19 @@ int c;
 
 	for (c = 0; c <= 100; c++)
 	{
-		if((c % 3) != 0 && (c % 5) != 0)
+		if ((c % 3) != 0 && (c % 5) != 0)
 		{
 		printf("%d ", c);
 		}
-		else if((c % 3) == 0 && (c % 5) == 0 && c > 0)
+		else if ((c % 3) == 0 && (c % 5) == 0 && c > 0)
 		{
 		printf("%s", "FizzBuzz ");
 		}
-		else if((c % 3) == 0 && c > 0)
+		else if ((c % 3) == 0 && c > 0)
 		{
 		printf("%s", "Fizz ");
 		}
-		else if((c % 5) == 0 && c > 0)
+		else if ((c % 5) == 0 && c > 0)
 		{
 		printf("%s", "Buzz ");
 		}
