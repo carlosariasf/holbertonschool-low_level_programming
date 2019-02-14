@@ -15,7 +15,11 @@ void print_to_98(int n)
 		if (o < 0)
 		{
 		_putchar('-');
-		_putchar('0' + (-o));
+			if(o < -9)
+			{
+			_putchar('0' + ((-o % 100) / 10));
+			}
+		_putchar('0' + (-o % 10));
 		}
 		else if (o < 10)
 		{
@@ -23,11 +27,14 @@ void print_to_98(int n)
 		}
 		else if (o > 9)
 		{
-		_putchar((o / 10) + '0');
+		_putchar(((o % 100) / 10) + '0');
 		_putchar((o % 10) + '0');
 		}
-	_putchar(',');
-	_putchar(' ');
+		if(o < 98)
+		{
+		_putchar(',');
+		_putchar(' ');
+		}	
 	}
 	}
 	else
@@ -38,10 +45,13 @@ void print_to_98(int n)
 		{
 		_putchar((o / 100) + '0');
 		}
-		_putchar((o / 10) + '0');
+		_putchar(((o % 100) / 10) + '0');
 		_putchar((o % 10) + '0');
+		if(o > 98)
+		{
 		_putchar(',');
 		_putchar(' ');
+		}		
 		}
 	}
 _putchar('\n');
