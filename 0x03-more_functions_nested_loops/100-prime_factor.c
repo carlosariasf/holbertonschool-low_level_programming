@@ -17,12 +17,12 @@ while (b < a)
 	if (a % b == 0)
 	{
 	a = a / b;
-	printf("%li", a);
+	printf("%ld", a);
 	break;
 	}
 b++;
 }
-printf("%c", '\n');
+printf("\n");
 
 return (0);
 }
