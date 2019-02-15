@@ -18,7 +18,8 @@ for (b = 2; b < a; b++)
 	{
 	a = a / b;
 	b = 2; 
-	printf("%li\n", b);
+	printf("%li ", b);
+	printf("%d", a);
 	}
 }
 
