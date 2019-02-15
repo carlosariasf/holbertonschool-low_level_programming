@@ -11,22 +11,18 @@ int main(void)
 {
 long a = 612852475143;
 long b = 2;
-int c = 0;
+long res;
 
 while (b < a)
 {
 	if (a % b == 0)
 	{
-	c++;
 	a = a / b;
-	if (c == 2)
-	{
-		printf("%ld", a);
-		break;
-	}
+	res = a;
 	}
 b++;
 }
+printf("%ld", res);
 printf("\n");
 
 return (0);
