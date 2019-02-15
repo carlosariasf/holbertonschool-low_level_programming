@@ -9,19 +9,20 @@
  */
 int main(void)
 {
-long a = 1231952;
-long b;
+long a = 612852475143;
+long b = 2;
 
-for (b = 2; b < a; b++)
+while (b < a)
 {
 	if (a % b == 0)
 	{
 	a = a / b;
-	b = 2; 
-	printf("%li ", b);
-	printf("%d", a);
+	printf("%li", a);
+	break;
 	}
+b++;
 }
+printf("%c", '\n');
 
 return (0);
 }
