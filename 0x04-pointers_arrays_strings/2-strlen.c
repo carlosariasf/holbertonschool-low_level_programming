@@ -1,19 +1,20 @@
 #include "holberton.h"
 /**
-* swap_int - reset
-*
-* @a: int
-* @b: int
+ * _strlen - reset
+ *
+ * @s: char
+ *
+ * Return: a return the size of the char.
 **/
 
 int _strlen(char *s)
 {
-int a;
+int a, b;
 
-for(s = 0 ; s < sizeof(s); s ++)
+for (a = 0; s[a] != '\0'; a++)
 {
-a++;
+b++;
 }
 
-return a;
+return (a);
 }
