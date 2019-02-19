@@ -1,11 +1,11 @@
 #include "holberton.h"
 /**
+* reset_to_98 - reset
 *
-*
-*
-**/void reset_to_98(int *n)
+* @n: int
+**/
+
+void reset_to_98(int *n)
 {
-
 *n = 98;
-
 }
