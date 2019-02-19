@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
-* reset_to_98 - reset
+* swap_int - reset
 *
 * @a: int
 * @b: int
