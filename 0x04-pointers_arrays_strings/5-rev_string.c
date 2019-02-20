@@ -12,12 +12,12 @@ void rev_string(char *s)
 {
 int a;
 int *b;
-*b = *s;
 
-for (a = 0; s[a] != '\0'; a++)
+for (a = 0; s[a] != '\0'; a++);
+
+for()
 {
-b++;
+
 }
-printf("%s", s);
 
 }
