@@ -28,7 +28,7 @@ for (i = 0; fuente[i] != '\0'; i++)
 		fuente++;
 	}
 }
-if (n == '\0')
+if (n == 0)
 {
 destino--;
 }
