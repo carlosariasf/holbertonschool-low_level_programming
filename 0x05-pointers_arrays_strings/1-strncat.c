@@ -13,24 +13,22 @@ char *destino;
 char *fuente;
 int i;
 
-
 destino = dest;
 fuente = src;
 
 for (i = 0; destino[i] != '\0'; destino++)
 ;
+if(n > 0)
+{
 for (i = 0; fuente[i] != '\0'; i++)
 {
 	if (i < n)
 	{
-		*destino = *fuente;
-		destino++;
-		fuente++;
+	*destino = *fuente;
+	destino++;
+	fuente++;	
 	}
 }
-if (n == 0)
-{
-destino--;
 }
 return (dest);
 }
