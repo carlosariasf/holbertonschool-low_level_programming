@@ -12,7 +12,7 @@ int a, b;
 
 for (a = 0; str[a] != '\0'; a++)
 ;
-if(a % 2 == 0)
+if (a % 2 == 0)
 {
 	for (b = (a / 2); b <= a; b++)
 	{
@@ -22,7 +22,7 @@ if(a % 2 == 0)
 }
 else
 {
-	for(b = (a - 1) / 2; b <= a; b++)
+	for (b = ((a - 1) / 2); b <= a; b++)
 	{
 	char c = str[b];
 	_putchar(c);
