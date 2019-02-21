@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
  * puts_half - reset
  *
@@ -9,15 +8,15 @@
 **/
 void puts_half(char *str)
 {
-int a, b, c;
+int a, b;
 
 for (a = 0; str[a] != '\0'; a++)
 {
 }
 for (b = (a / 2); b <= a ; b++)
 {
-c = str[b];
-_putchar(0 + c);
+char c = str[b];
+_putchar(c);
 }
 _putchar('\n');
 }
