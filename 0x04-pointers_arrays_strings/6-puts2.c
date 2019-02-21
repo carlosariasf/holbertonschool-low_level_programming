@@ -13,7 +13,7 @@ int a, b;
 
 for (a = 0; str[a] != '\0'; a++)
 {
-	if(str[a] % 2 == 0 || str[a] == 0)
+	if (str[a] % 2 == 0 || str[a] == 0)
 	{
 	b = str[a];
 	_putchar(0 + b);
