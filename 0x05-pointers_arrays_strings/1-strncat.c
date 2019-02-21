@@ -18,7 +18,7 @@ fuente = src;
 
 for (i = 0; destino[i] != '\0'; destino++)
 ;
-if(n > 0)
+if (n > 0)
 {
 for (i = 0; fuente[i] != '\0'; i++)
 {
@@ -26,7 +26,7 @@ for (i = 0; fuente[i] != '\0'; i++)
 	{
 	*destino = *fuente;
 	destino++;
-	fuente++;	
+	fuente++;
 	}
 }
 }
