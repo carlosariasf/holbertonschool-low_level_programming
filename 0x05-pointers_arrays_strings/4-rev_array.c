@@ -5,27 +5,17 @@
  * @a: int
  * @n: int
  *
- * Return : int return the size of the char.
+ * Return: int return the size of the char.
 **/
 void reverse_array(int *a, int n)
 {
-char *destino = dest;
 int i;
+int *b = a;
 
-for (i = 0; dest[i] != '\0'; dest--)
-;
-dest++;
-for (i = 0; i < n && *dest != '\0'; i++)
+for (i = 0; i < n / 2; i++)
 {
-	*dest = *src;
-	dest++;
-	src++;
+int v = b[i];
+b[i] = b[n - 1 - i];
+b[n - 1 - i] = v;
 }
-for (i = 0; i < n && *dest == '\0'; i++)
-{
-	*dest = '*';
-	dest++;
-}
-
-return (destino);
 }
