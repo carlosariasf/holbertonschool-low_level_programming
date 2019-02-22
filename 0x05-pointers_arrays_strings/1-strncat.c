@@ -9,23 +9,18 @@
 **/
 char *_strncat(char *dest, char *src, int n)
 {
-char *destino;
-char *fuente;
+char *destino = dest;
 int i;
 
-destino = dest;
-fuente = src;
-
-for (i = 0; destino[i] != '\0'; destino++)
+for (i = 0; dest[i] != '\0'; dest++)
 ;
-if (n > 0)
-{
-while (i < n)
+
+for(i = 0; *src != '\0' && i < n; i++)
 	{
-	*destino = *fuente;
-	destino++;
-	fuente++;
+	*dest = *src;
+	dest++;
+	src++;
 	}
-}
-return (dest);
+
+return (destino);
 }
