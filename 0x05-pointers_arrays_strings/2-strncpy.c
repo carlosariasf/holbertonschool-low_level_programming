@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * *_strncopy - reset
+ * *_strncpy - reset
  *
  * @dest: char
  * @src: char
@@ -15,12 +15,12 @@ int i;
 for (i = 0; dest[i] != '\0'; dest--)
 ;
 dest++;
-for (i = 0; i < n; i++)
-	{
+for (i = 0; i <= n; i++)
+{
 	*dest = *src;
 	dest++;
 	src++;
-	}
+}
 
 return (destino);
 }
