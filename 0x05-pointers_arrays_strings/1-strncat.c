@@ -20,15 +20,12 @@ for (i = 0; destino[i] != '\0'; destino++)
 ;
 if (n > 0)
 {
-for (i = 0; fuente[i] != '\0'; i++)
-{
-	if (i < n)
+while (i < n)
 	{
 	*destino = *fuente;
 	destino++;
 	fuente++;
 	}
-}
 }
 return (dest);
 }
