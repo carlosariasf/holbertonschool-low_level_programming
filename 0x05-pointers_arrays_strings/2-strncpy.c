@@ -10,21 +10,23 @@
 char *_strncpy(char *dest, char *src, int n)
 {
 char *destino = dest;
-int i;
+int s, i, a;
 
-for (i = 0; dest[i] != '\0'; dest--)
+for (s = 0; src[s] != '\0'; s++)
 ;
-dest++;
-for (i = 0; i < n && *dest != '\0'; i++)
+for (a = 0; a < n; a++)
 {
-	*dest = *src;
-	dest++;
-	src++;
-}
-for (i = 0; i < n && *dest == '\0'; i++)
-{
-	*dest = '*';
-	dest++;
+	if(a < s)
+	{
+		*dest = *src;
+		dest++;
+		src++;
+	}
+	else
+	{
+		*dest = '\0';
+		dest++;
+	}
 }
 
 return (destino);
