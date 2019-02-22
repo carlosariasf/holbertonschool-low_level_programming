@@ -2,10 +2,10 @@
 /**
  * *_strcat - reset
  *
- * @*dest: char
- * @*src: char
+ * @dest: char
+ * @src: char
  *
- * Return : a return the size of the char.
+ * Return: char return the size of the char.
 **/
 char *_strcat(char *dest, char *src)
 {
