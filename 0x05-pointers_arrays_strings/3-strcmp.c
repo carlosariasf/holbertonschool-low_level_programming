@@ -1,31 +1,28 @@
 #include "holberton.h"
 /**
- * _strcmp - reset
+ * *_strcmp - reset
  *
  * @s1: char
  * @s2: char
- * @n: int
+ *
  * Return: int return the size of the char.
 **/
 int _strcmp(char *s1, char *s2)
 {
-char *destino = dest;
-int i;
+int s, ss;
 
-for (i = 0; dest[i] != '\0'; dest--)
+for (s = 0; s1[s] != '\0'; s++)
 ;
-dest++;
-for (i = 0; i < n && *dest != '\0'; i++)
+for (ss = 0; s2[ss] != '\0'; ss++)
+;
+if (s < ss)
 {
-	*dest = *src;
-	dest++;
-	src++;
+	return (-15);
 }
-for (i = 0; i < n && *dest == '\0'; i++)
+else if (s > ss)
 {
-	*dest = '*';
-	dest++;
+	return (15);
 }
 
-return (destino);
+return (0);
 }
