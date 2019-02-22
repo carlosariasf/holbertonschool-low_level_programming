@@ -1,13 +1,13 @@
 #include "holberton.h"
 /**
- * *_strncpy - reset
+ * _strcmp - reset
  *
- * @dest: char
- * @src: char
+ * @s1: char
+ * @s2: char
  * @n: int
- * Return: char return the size of the char.
+ * Return: int return the size of the char.
 **/
-char *_strncpy(char *dest, char *src, int n)
+int _strcmp(char *s1, char *s2)
 {
 char *destino = dest;
 int i;

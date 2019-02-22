@@ -1,13 +1,13 @@
 #include "holberton.h"
 /**
- * *_strncpy - reset
+ * reverse_array - reset
  *
- * @dest: char
- * @src: char
+ * @a: int
  * @n: int
- * Return: char return the size of the char.
+ *
+ * Return : int return the size of the char.
 **/
-char *_strncpy(char *dest, char *src, int n)
+void reverse_array(int *a, int n)
 {
 char *destino = dest;
 int i;
