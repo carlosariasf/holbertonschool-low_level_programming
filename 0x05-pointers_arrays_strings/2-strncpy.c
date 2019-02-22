@@ -21,7 +21,7 @@ for (i = 0; i < n && *dest != '\0'; i++)
 	dest++;
 	src++;
 }
-for(i = 0; i < n && *dest == '\0'; i++)
+for (i = 0; i < n && *dest == '\0'; i++)
 {
 	*dest = '*';
 	dest++;
