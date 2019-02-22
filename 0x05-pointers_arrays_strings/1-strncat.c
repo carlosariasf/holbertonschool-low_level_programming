@@ -15,7 +15,7 @@ int i;
 for (i = 0; dest[i] != '\0'; dest++)
 ;
 
-for(i = 0; *src != '\0' && i < n; i++)
+for (i = 0; *src != '\0' && i < n; i++)
 	{
 	*dest = *src;
 	dest++;
