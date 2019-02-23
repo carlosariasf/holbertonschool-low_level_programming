@@ -2,30 +2,24 @@
 /**
  * *string_toupper - reset
  *
- * @*: char
+ * @p: int
  *
  *
  * Return: char return the size of the char.
 **/
-char *string_toupper(char *);
+char *string_toupper(char *p)
 {
-char *destino = dest;
 int i;
+char *b = p;
 
-for (i = 0; dest[i] != '\0'; dest--)
-;
-dest++;
-for (i = 0; i < n && *dest != '\0'; i++)
+for (i = 0; b[i] != '\n'; i++)
 {
-	*dest = *src;
-	dest++;
-	src++;
+
+if (b[i] >= 97 && b[i] <= 122)
+{
+	b[i] -= 32;
 }
-for (i = 0; i < n && *dest == '\0'; i++)
-{
-	*dest = '*';
-	dest++;
 }
 
-return (destino);
+return (b);
 }
