@@ -7,10 +7,10 @@
  *
  * Return: char return the size of the char.
 **/
-char *string_toupper(char *p)
+char *string_toupper(char *s)
 {
 int i;
-char *b = p;
+char *b = s;
 
 for (i = 0; b[i] != '\n'; i++)
 {
