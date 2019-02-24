@@ -20,12 +20,12 @@ for (s = 0; s1[s] != '\0' && s2[s] != '\0'; s++)
 {
 	count = s2[s] - s1[s];
 	count = count <= 0 ? count * -1 : count * 1;
-	if (count >= fin)
+	if (count > fin)
 	{
 	fin = count;
 	}
 }
-fin = ss < sss ? fin * -1 : fin * 1;
+fin = ss > sss ? fin * -1 : fin * 1;
 
 return (fin);
 }
