@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
  * *_strcmp - reset
  *
@@ -9,24 +10,22 @@
 **/
 int _strcmp(char *s1, char *s2)
 {
-int s, ss;
-int count;
-/**int fin = 0;**/
+int s, ss, sss, count, fin = 0;
 
-for (s = 0; s1[s] != '\0'; s++)
+for(ss = 0; s1[ss] != '\0'; ss++)
+;
+for(sss = 0; s2[sss] != '\0'; sss++)
+;
+for (s = 0; s1[s] != '\0' && s2[s] != '\0'; s++)
 {
-for (ss = 0; ss == s && s2[ss] != '\0'; ss++)
-{
-if (s1[s] > s2[ss])
-{
-	count = s1[s] - s2[ss];
+	count = s2[s] - s1[s];
+	count = count <= 0 ? count * -1 : count * 1;
+	if(count >= fin)
+	{
+	fin = count;
+	}
 }
-else
-{
-	count = s1[s] - s2[ss];
-}
-}
-}
+fin = ss < sss ? fin * -1 : fin * 1;
 
-return (count);
+return (fin);
 }
