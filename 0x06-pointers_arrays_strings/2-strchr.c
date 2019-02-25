@@ -9,8 +9,7 @@
 char *_strchr(char *s, char c)
 {
 char *dest;
-char x = '\0';
-char *p = &x;
+char *p = NULL;
 
 int i;
 
