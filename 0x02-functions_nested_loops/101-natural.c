@@ -10,14 +10,16 @@
 int main(void)
 {
 	int o;
+	int sum;
 
 	for (o = 1; o < 1024; o++)
 	{
 		if (o % 3 == 0 || o % 5 == 0)
 		{
-		printf("%d\n", o);
+		sum += o;
 		}
 	}
+printf("%d\n", sum);
 
 return (0);
 }
