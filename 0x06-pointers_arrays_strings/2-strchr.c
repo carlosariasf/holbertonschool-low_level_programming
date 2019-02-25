@@ -13,10 +13,10 @@ int i;
 for (i = 0; s[i] != '\0'; i++)
 {
 if (s[i] == c)
-	{
-		dest = &s[i];
-		break;
-	}
+{
+	dest = &s[i];
+	break;
+}
 }
 
 return (dest);
