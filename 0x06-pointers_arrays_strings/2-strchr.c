@@ -14,7 +14,8 @@ for (i = 0; s[i] != '\0'; i++)
 {
 if (s[i] == c)
 	{
-		dest = &s[i-1];
+		dest = &s[i];
+		break;
 	}
 }
 
