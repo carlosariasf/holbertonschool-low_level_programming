@@ -12,7 +12,7 @@ char *dest2 = dest;
 char *src2 = src;
 int i;
 
-for (i = 0; i <= (int) n; i++)
+for (i = 0; i < (int) n; i++)
 {
 
 *dest2 = *src2;
