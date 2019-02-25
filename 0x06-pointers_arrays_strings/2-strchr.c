@@ -19,7 +19,6 @@ if (s[i] == c)
 {
 	dest = &s[i];
 	return (dest);
-	break;
 }
 }
 
