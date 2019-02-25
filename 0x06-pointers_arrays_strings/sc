@@ -1,0 +1,6 @@
+#!/bin/bash
+echo "doing: [$1] [$2] [$3] ... of [$@]"
+touch $1
+git add -A
+git commit -m "add $1"
+git push origin master
