@@ -1,5 +1,4 @@
 #include "holberton.h"
-#define NULL 0
 /**
  * *_strchr - reset
  * @s: int
@@ -9,8 +8,6 @@
 char *_strchr(char *s, char c)
 {
 char *dest;
-char *p = NULL;
-
 int i;
 
 for (i = 0; s[i] != '\0'; i++)
@@ -22,5 +19,5 @@ if (s[i] == c)
 }
 }
 
-return (p);
+return (0);
 }
