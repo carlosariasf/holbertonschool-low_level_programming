@@ -17,7 +17,7 @@ for (i = 0; i < size; i++)
 {
 	for (ii = 0; ii < size; ii++)
 	{
-	if (i == j)
+	if (i == ii)
 	{
 	sum = sum + a[o];
 	}
