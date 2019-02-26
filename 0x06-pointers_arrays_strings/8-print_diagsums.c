@@ -1,8 +1,9 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * print_chessboard - reset
+ * print_diagsums - reset
  * @a: int
+ * @size: int
  * Return : char return the size of the char.
 **/
 void print_diagsums(int *a, int size)
@@ -16,11 +17,11 @@ for (i = 0; i < size; i++)
 {
 	for (ii = 0; ii < size; ii++)
 	{
-	if(i == j)
+	if (i == j)
 	{
 	sum = sum + a[o];
 	}
-	if((i + ii) == (size - 1))
+	if ((i + ii) == (size - 1))
 	{
 	sum2 = sum2 + a[o];
 	}
