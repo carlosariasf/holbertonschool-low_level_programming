@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * *_strchr - reset
+ * *_strspn - reset
  * @s: int
  * @accept: int
  * Return: char return the size of the char.
@@ -12,7 +12,7 @@ int o;
 
 for (i = 0; s[i] != '\0'; i++)
 {
-	for(ii = 0; accept[ii] != '\0'; ii++)
+	for (ii = 0; accept[ii] != '\0'; ii++)
 	{
 	if (s[i] == accept[ii])
 		o++;
