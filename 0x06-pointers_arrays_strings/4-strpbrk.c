@@ -1,25 +1,22 @@
 #include "holberton.h"
 /**
- * *_strspn - reset
+ * *_strpbrk - reset
  * @s: int
  * @accept: int
  * Return: char return the size of the char.
 **/
-unsigned int _strspn(char *s, char *accept)
+char *_strpbrk(char *s, char *accept)
 {
-unsigned int i, ii;
-unsigned int o = 0;
+int i, ii;
 
 for (i = 0; s[i] != '\0'; i++)
 {
 	for (ii = 0; accept[ii] != '\0'; ii++)
 	{
 	if (s[i] == accept[ii])
-		o++;
+		return (&s[i]);
 	}
-	if (i + 1 != o)
-		break;
 }
 
-return (o);
+return (0);
 }
