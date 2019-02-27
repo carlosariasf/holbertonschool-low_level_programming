@@ -1,9 +1,8 @@
 #include "holberton.h"
 /**
- * rev_char - reset
- * @b: *char
+ * _print_rev_recursion- reset
+ * @s: *char
 **/
-
 void _print_rev_recursion(char *s)
 {
 if (*s)
