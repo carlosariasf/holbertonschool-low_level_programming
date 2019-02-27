@@ -2,6 +2,7 @@
 /**
  *  _strlen_recursion - reset
  * @s: *char
+ * Return: 0
 **/
 
 int _strlen_recursion(char *s)
