@@ -2,7 +2,6 @@
 /**
  * rev_char - reset
  * @b: int
- * @n: int
 **/
 void rev_char(char *b)
 {
