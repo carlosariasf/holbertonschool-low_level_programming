@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
  * rev_char - reset
- * @b: int
+ * @b: *char
 **/
 void rev_char(char *b)
 {
@@ -15,7 +15,7 @@ rev_char(b);
 
 /**
  * _print_rev_recursion - reset
- * @s: int
+ * @s: *char
 **/
 void _print_rev_recursion(char *s)
 {
@@ -26,7 +26,6 @@ _print_rev_recursion(s);
 }
 else
 {
-s++;
 rev_char(s);
 }
 }
