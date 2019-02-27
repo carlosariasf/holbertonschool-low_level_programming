@@ -12,30 +12,25 @@ _putchar(*b);
 b--;
 rev_char(b);
 }
-}
-/**
- * print_char - reset
- * @a: int
- * @count: int
-**/
-void print_char(char *a)
-{
-if (*a != '\0')
-{
-a++;
-print_char(a);
-}
 else
 {
-rev_char(a);
+_putchar('\n');
 }
 }
+
 /**
  * _print_rev_recursion - reset
  * @s: int
 **/
 void _print_rev_recursion(char *s)
 {
-print_char(s);
-_putchar('\n');
+if (*s != '\0')
+{
+s++;
+_print_rev_recursion(s);
+}
+else
+{
+rev_char(s);
+}
 }
