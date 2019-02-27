@@ -4,14 +4,13 @@
  * @b: int
  * @n: int
 **/
-void rev_char(char *b, int n)
+void rev_char(char *b)
 {
 if (*b != '\n')
 {
 _putchar(*b);
 b--;
-n--;
-rev_char(b, n);
+rev_char(b);
 }
 }
 /**
@@ -19,17 +18,16 @@ rev_char(b, n);
  * @a: int
  * @count: int
 **/
-void print_char(char *a, int count)
+void print_char(char *a)
 {
 if (*a != '\0')
 {
 a++;
-count++;
-print_char(a, count);
+print_char(a);
 }
 else
 {
-rev_char(a, count);
+rev_char(a);
 }
 }
 /**
@@ -38,6 +36,6 @@ rev_char(a, count);
 **/
 void _print_rev_recursion(char *s)
 {
-print_char(s, 0);
+print_char(s);
 _putchar('\n');
 }
