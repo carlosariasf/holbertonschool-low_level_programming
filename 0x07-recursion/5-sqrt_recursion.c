@@ -8,6 +8,7 @@
 int _sqrt_recursion(int n)
 {
 int n2;
+
 if (n * n)
 {
 n2 = n - 1;
@@ -21,4 +22,6 @@ else
 {
 return (-1);
 }
+
+return (0);
 }
