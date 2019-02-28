@@ -13,7 +13,7 @@ if (n * n)
 n2 = n - 1;
 return (n2 * (_sqrt_recursion(n)));
 }
-else if (y == 0)
+else if (n == 0)
 {
 return (1);
 }
