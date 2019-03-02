@@ -1,9 +1,9 @@
 #include "holberton.h"
 /**
- * main -
- *@argc: char
- *@argv: char
- *Return - 0
+ * main - Args C V
+ * @argc: char
+ * @argv: char
+ * Return: 0
 **/
 int main(int argc, char *argv[])
 {
