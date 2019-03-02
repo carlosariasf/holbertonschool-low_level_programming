@@ -1,10 +1,9 @@
 #include "holberton.h"
-#define UNUSED(x)
 /**
- * main - 
- *@argc: char
- *@argv: char
- *Return - 0
+ * main - args
+ * @argc: char
+ * @argv: char
+ * Return: 0
 **/
 int main(int argc, char *argv[] __attribute__((unused)))
 {
