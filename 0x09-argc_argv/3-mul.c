@@ -1,23 +1,22 @@
 #include "holberton.h"
+#include <stdio.h>
+#include <stdlib.h>
 /**
- * main - 
- *@argc: char
- *@argv: char
- *Return - 0
+ * main - atoi
+ * @argc: char
+ * @argv: char
+ * Return: 0
 **/
 int main(int argc, char *argv[])
 {
-int i, ii;
-char *p;
-
-for(i = 0; i < argc; i++)
+if (argc > 2)
 {
-p = argv[i];
-for(ii = 0; p[ii] != '\0'; p++)
-{
-_putchar(*p);
+printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
 }
-_putchar('\n');
+else
+{
+printf("%s\n", "Error");
+return (1);
 }
 
 return (0);
