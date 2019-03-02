@@ -10,26 +10,29 @@
 **/
 int main(int argc, char *argv[])
 {
-int i, sum = 0;
+int i, ii, sum = 0;
+char *p;
+
 if (argc > 0)
 {
-for (i = 0; i < argc; i++)
-{
-if (!isalpha(*argv[i]))
-{
-sum += atoi(argv[i]);
+	for (i = 1; i < argc; i++)
+	{
+	p = argv[i];
+		for (ii = 0; p[ii] != '\0'; p++)
+		{
+			if (isalpha(*p))
+			{
+			printf("%s\n", "Error");
+			return (1);
+			}
+		}
+	sum += atoi(argv[i]);
+	}
+	printf("%d\n", sum);
 }
 else
 {
-printf("%s\n", "Error");
-return (1);
-}
-}
-printf("%d\n", sum);
-}
-else
-{
-printf("%d\n", '0');
+	printf("%d\n", '0');
 }
 
 return (0);
