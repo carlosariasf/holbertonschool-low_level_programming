@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * main - 
+ * main -
  *@argc: char
  *@argv: char
  *Return - 0
@@ -12,7 +12,7 @@ char *p = *argv;
 
 if (argc > 0)
 {
-for(i = 0; p[i] != '\0'; p++)
+for (i = 0; p[i] != '\0'; p++)
 {
 _putchar(*p);
 }
