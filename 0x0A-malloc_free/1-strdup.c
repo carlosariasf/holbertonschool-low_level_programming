@@ -27,15 +27,16 @@ char *_strdup(char *str)
 int i, size;
 char *p;
 
-if (str == NULL)
+if(str == NULL)
 	return (NULL);
 size = size_string(str);
 p = malloc(sizeof(char) * size);
-if (p == NULL)
+if(p == NULL)
 	return (NULL);
 for (i = 0; i < (int) size; i++)
 	p[i] = str[i];
-if (p == NULL)
+if(size_string(p) != size_string(str))
 	return (NULL);
+
 return (p);
 }
