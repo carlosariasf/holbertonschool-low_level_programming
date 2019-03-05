@@ -9,12 +9,9 @@ int size_string(char *str)
 {
 int i;
 
-if (*str != '\0')
-	for (i = 0; str[i] != '\0'; i++)
-	;
-	return (i);
-
-return (0);
+for (i = 0; str[i] != '\0'; i++)
+;
+return (i);
 }
 /**
  * *_strdup - Array
@@ -26,17 +23,13 @@ char *_strdup(char *str)
 {
 int i, size;
 char *p;
-
-if(str == NULL)
+if (str == NULL)
 	return (NULL);
 size = size_string(str);
 p = malloc(sizeof(char) * size);
-if(p == NULL)
+if (p == NULL)
 	return (NULL);
-for (i = 0; i < (int) size; i++)
+for (i = 0; i <= size; i++)
 	p[i] = str[i];
-if(size_string(p) != size_string(str))
-	return (NULL);
-
 return (p);
 }
