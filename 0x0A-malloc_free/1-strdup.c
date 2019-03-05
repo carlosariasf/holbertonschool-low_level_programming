@@ -31,9 +31,11 @@ if (str == NULL)
 	return (NULL);
 size = size_string(str);
 p = malloc(sizeof(char) * size);
+if (p == NULL)
+	return (NULL);
 for (i = 0; i < (int) size; i++)
 	p[i] = str[i];
-if(p == NULL)
+if (p == NULL)
 	return (NULL);
 return (p);
 }
