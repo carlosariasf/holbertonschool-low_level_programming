@@ -24,12 +24,15 @@ return (0);
 **/
 char *_strdup(char *str)
 {
-int i;
-int size = size_string(str);
+int i, size;
 char *p;
 
-p = malloc(sizeof(char) * size);
-if (p == NULL || size == 0)
+if(str == NULL)
+	return (NULL);
+
+size = size_string(str);
+p = malloc(sizeof(str) * size);
+if(p == NULL)
 	return (NULL);
 for (i = 0; i < (int) size; i++)
 	p[i] = str[i];
