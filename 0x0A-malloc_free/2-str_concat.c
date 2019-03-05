@@ -36,6 +36,7 @@ for (i = 0; i < size1; i++)
 	p[i] = s1[i];
 for (ii = 0; ii < size2; i++, ii++)
 	p[i] = s2[ii];
-p[sizec]='\0';
+p[sizec] = '\0';
+
 return (p);
 }
