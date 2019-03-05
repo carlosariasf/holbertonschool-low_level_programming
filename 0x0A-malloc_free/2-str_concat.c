@@ -8,7 +8,8 @@
 int size_string(char *str)
 {
 int i;
-if(str == '\0')
+
+if (str == NULL)
 	return (0);
 for (i = 0; str[i] != '\0'; i++)
 ;
@@ -33,7 +34,7 @@ if (p == NULL)
 	return (NULL);
 for (i = 0; i < size1; i++)
 	p[i] = s1[i];
-for (ii = 0; i <= sizec; i++, ii++)
+for (ii = 0; ii <= size2; i++, ii++)
 	p[i] = s2[ii];
 
 return (p);
