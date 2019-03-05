@@ -29,7 +29,7 @@ char *p;
 size1 = size_string(s1);
 size2 = size_string(s2);
 sizec = size1 + size2;
-p = malloc(sizeof(char) * sizec);
+p = malloc(sizeof(char) * sizec + 1);
 if (p == NULL)
 	return (NULL);
 for (i = 0; i < size1; i++)
