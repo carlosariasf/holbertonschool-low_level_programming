@@ -13,7 +13,7 @@ int i;
 char *p;
 
 p = malloc(sizeof(char) * size);
-if (p == NULL)
+if (p == NULL || size == 0)
 	return (NULL);
 for (i = 0; i < (int) size; i++)
 	p[i] = c;
