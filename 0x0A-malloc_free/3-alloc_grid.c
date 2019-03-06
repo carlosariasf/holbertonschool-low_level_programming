@@ -14,13 +14,26 @@ int **p;
 
 if (width <= 0 || height <= 0)
 	return (NULL);
-p = (int **)malloc(sizeof(int *) * height);
+
+p = (int **) malloc(sizeof(int *) * height);
 if (p == NULL)
+{
+	free(p);
 	return (NULL);
+}
 for (i = 0; i < height; i++)
-	p[i] = (int *)malloc(sizeof(int) * width);
-for (i = 0; i < height; i++)
+{
+	p[i] = (int *) malloc(sizeof(int) * width);
+	if (p[i] == NULL)
+	{
+		for (ii = 0; ii < i; ii++)
+			free(p[ii]);
+		free(p);
+		return (NULL);
+	}
 	for (ii = 0; ii < width; ii++)
 		p[i][ii] = 0;
+}
+
 return (p);
 }
