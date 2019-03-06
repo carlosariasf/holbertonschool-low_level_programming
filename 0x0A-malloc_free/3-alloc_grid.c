@@ -8,16 +8,19 @@
 **/
 int **alloc_grid(int width, int height)
 {
+int max = 2147483647;
 int i;
 int **p;
 
-if (width <= 0 || height <= 0)
+if (width <= 0 || height <= 0 || width >= max || height >= max)
 	return (NULL);
-p = calloc(width, sizeof(int));
+p = calloc(height, sizeof(int *));
 if (p == NULL)
 	return (NULL);
 for (i = 0; i < height; i++)
 	p[i] = calloc(width, sizeof(int));
+	if (p[i] == NULL)
+		return (NULL);
 
 return (p);
 }
