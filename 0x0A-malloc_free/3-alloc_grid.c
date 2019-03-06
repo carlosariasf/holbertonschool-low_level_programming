@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 #include <stdlib.h>
 /**
  * **alloc_grid - Array
@@ -13,12 +14,10 @@ int **p;
 
 if (width <= 0 || height <= 0)
 	return (NULL);
-p = malloc(sizeof(int *) * height);
-if (p == NULL)
+if ((p = malloc(sizeof(int *) * height)) == NULL)
 	return (NULL);
 for (i = 0; i < height; i++)
-	p[i] = malloc(sizeof(int) * width + 1);
-	if(p[i] == NULL)
+	if ((p[i] = malloc(sizeof(int) * width)) == NULL)
 		return (NULL);
 for (i = 0; i < height; i++)
 	for (ii = 0; ii < width; ii++)
