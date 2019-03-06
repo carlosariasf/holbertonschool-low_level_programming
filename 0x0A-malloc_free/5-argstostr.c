@@ -4,7 +4,7 @@
 /**
  * counter - Counter of items
  * @av: pointer to string
- * Return: Number of items
+ * Return: number of items
 **/
 int counter(char *av)
 {
@@ -30,7 +30,7 @@ if (ac == 0 || av == NULL)
 	return (NULL);
 for (i = 0; i < ac; i++)
 	wd += counter(av[i]) + 1;
-p = malloc(sizeof(char) * wd - 1);
+p = malloc(sizeof(char) * wd);
 if (p == NULL)
 	return (NULL);
 for (i = 0; i < ac; i++)
