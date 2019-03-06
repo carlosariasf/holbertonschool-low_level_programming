@@ -16,10 +16,10 @@ if (width <= 0 || height <= 0)
 p = malloc(sizeof(int *) * height);
 if (p == NULL)
 	return (NULL);
-for (i = 0; i < height; i++)
+for (i = 0; i <= height; i++)
 	p[i] = malloc(sizeof(int) * width);
-for(i = 0; i < height; i++)
-	for(ii = 0; ii < width; ii++)
+for (i = 0; i <= height; i++)
+	for (ii = 0; ii <= width; ii++)
 		p[i][ii] = 0;
 
 return (p);
