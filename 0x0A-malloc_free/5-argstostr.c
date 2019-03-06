@@ -13,7 +13,7 @@ int i = ac;
 char **p = av;
 
 if (i > 0)
-	printf("%d", i);
+	return (0);
 
 return (*p);
 }
