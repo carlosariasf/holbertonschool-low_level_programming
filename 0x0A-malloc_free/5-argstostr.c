@@ -29,7 +29,7 @@ int i, ii, iii = 0, wd;
 if (ac == 0 || av == NULL)
 	return (NULL);
 for (i = 0; i < ac; i++)
-	wd += counter(av[i]) + 1;
+	wd += counter(av[i]);
 p = malloc(sizeof(char) * wd);
 if (p == NULL)
 	return (NULL);
