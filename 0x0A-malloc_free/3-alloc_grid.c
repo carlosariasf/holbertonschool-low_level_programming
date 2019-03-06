@@ -17,7 +17,9 @@ p = malloc(sizeof(int *) * height);
 if (p == NULL)
 	return (NULL);
 for (i = 0; i < height; i++)
-	p[i] = malloc(sizeof(int) * width);
+	p[i] = malloc(sizeof(int) * width + 1);
+	if(p[i] == NULL)
+		return (NULL);
 for (i = 0; i < height; i++)
 	for (ii = 0; ii < width; ii++)
 		p[i][ii] = 0;
