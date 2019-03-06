@@ -24,6 +24,5 @@ for (i = 0; i < height; i++)
 for (i = 0; i < height; i++)
 	for (ii = 0; ii < width; ii++)
 		p[i][ii] = 0;
-free(p2);
 return (p);
 }
