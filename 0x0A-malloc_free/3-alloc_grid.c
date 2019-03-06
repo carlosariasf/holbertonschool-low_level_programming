@@ -19,6 +19,7 @@ p = (int **)malloc(sizeof(int *) * height);
 p2 = (int *)malloc(sizeof(int) * width);
 if (p == NULL || p2 == NULL)
 	return (NULL);
+free(p2);
 for (i = 0; i < height; i++)
 	p[i] = (int *)malloc(sizeof(int) * width);
 for (i = 0; i < height; i++)
