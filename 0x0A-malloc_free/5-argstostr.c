@@ -3,17 +3,17 @@
 #include <stdlib.h>
 /**
  * counter - Counter of items
- * @av: pointer to string
+ * @av: String pointer
  * Return: number of items
 **/
 int counter(char *av)
 {
-int ii = 0;
+int i = 0;
 
-	for (ii = 0; av[ii] != '\0'; ii++)
+	for (i = 0; av[i] != '\0'; i++)
 	;
 
-return (ii);
+return (i);
 }
 /**
  * *argstostr - Array
@@ -23,27 +23,25 @@ return (ii);
 **/
 char *argstostr(int ac, char **av)
 {
-char *p, *p2;
-int i, ii, iii = 0, wd;
+	char *p, *p2;
+	int i, wd = 0;
 
-if (ac == 0 || av == NULL)
-	return (NULL);
-for (i = 0; i < ac; i++)
-	wd += counter(av[i]) + 1;
-p = malloc(sizeof(char) * wd);
-if (p == NULL)
-	return (NULL);
-for (i = 0; i < ac; i++)
-{
-	p2 = av[i];
-	for (ii = 0; p2[ii] != '\0'; ii++)
+	if (ac == 0 || av == NULL)
+		return (NULL);
+	for (i = 0; i < ac; i++)
+		wd += counter(av[i]) + 1;
+	p2 = *av;
+	p = (char *) malloc(sizeof(char) * (wd + 1));
+	if (p == NULL)
+		return (NULL);
+	for (i = 0; i < wd; i++)
 	{
-		p[iii] = p2[ii];
-		iii++;
+		if(p2[i] == '\0')
+			p[i] = '\n';
+		else
+			p[i] = p2[i];
 	}
-p[iii] = '\n';
-iii++;
-}
-
-return (p);
+	p[i] = '\0';
+ 
+	return (p);
 }
