@@ -36,12 +36,12 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	for (i = 0; i < wd; i++)
 	{
-		if(p2[i] == '\0')
+		if (p2[i] == '\0')
 			p[i] = '\n';
 		else
 			p[i] = p2[i];
 	}
 	p[i] = '\0';
- 
+
 	return (p);
 }
