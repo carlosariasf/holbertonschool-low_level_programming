@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * *malloc_checked - 
- * @b:
+ * *malloc_checked - Fuction
+ * @b: int
  *
- * Return:
+ * Return: test
 **/
 
 void *malloc_checked(unsigned int b)
@@ -15,7 +15,7 @@ p = malloc(sizeof(unsigned int) * b);
 if (p == NULL)
 {
 	free(p);
-	exit (98);
+	exit(98);
 }
 
 return (p);
