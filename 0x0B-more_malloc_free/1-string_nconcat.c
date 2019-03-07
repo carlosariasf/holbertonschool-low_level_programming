@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * *malloc_checked - Fuction
- * @b: int
- *
- * Return: test
+ * *string_nconcat - Fuction
+ * @s1: char
+ * @s2: char
+ * @n: unsigned int
+ * Return: char
 **/
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
@@ -23,7 +24,7 @@ else
 p = malloc(sizeof(char) * (ls1 + lss) + 1);
 if (p == NULL)
 	return (NULL);
-for(i = 0; i < (ls1 + lss) + 1; i++)
+for (i = 0; i < (ls1 + lss) + 1; i++)
 {
 	if (i < ls1)
 	{
@@ -31,7 +32,7 @@ for(i = 0; i < (ls1 + lss) + 1; i++)
 	}
 	if (i > ls1)
 	{
-		p[i-1] = s2[i - ls1 - 1];
+		p[i - 1] = s2[i - ls1 - 1];
 	}
 }
 p[i] = '\0';
