@@ -14,7 +14,6 @@ unsigned int *p;
 p = malloc(sizeof(unsigned int) * b);
 if (p == NULL)
 {
-	free(p);
 	exit(98);
 }
 
