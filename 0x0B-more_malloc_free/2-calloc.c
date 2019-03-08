@@ -18,7 +18,7 @@ if (nmemb == 0 || size == 0)
 p = malloc(size * nmemb);
 if (p == NULL)
 	return (NULL);
-for (i = 0; i < nmemb; i++)
+for (i = 0; i < (size * memb); i++)
 {
 	p[i] = '\0';
 }
