@@ -14,7 +14,7 @@ int *p;
 if (min > max)
 	return (NULL);
 p = malloc(sizeof(int) * 1);
-if(p == NULL)
+if (p == NULL)
 	return (NULL);
 
 return (p);
