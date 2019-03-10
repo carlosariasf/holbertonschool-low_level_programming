@@ -26,7 +26,6 @@ while (i < max)
 	i++;
 	j++;
 	}
-p[j] = 0;
 
 return (p);
 }
