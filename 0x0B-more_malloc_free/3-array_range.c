@@ -17,16 +17,15 @@ if (min > max)
 else
 	all = max - min + 1;
 
-p = malloc(sizeof(int) * (all + 1));
+p = malloc(sizeof(int) * all);
 if (p == NULL)
 	return (NULL);
-while (i <= max)
+while (i < max)
 	{
 	p[j] = i;
 	i++;
 	j++;
 	}
-
 p[j] = 0;
 
 return (p);
