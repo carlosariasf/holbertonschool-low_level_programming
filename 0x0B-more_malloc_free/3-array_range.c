@@ -20,7 +20,7 @@ else
 p = malloc(sizeof(int) * (all + 1));
 if (p == NULL)
 	return (NULL);
-while ( i <= max)
+while (i <= max)
 	{
 	p[j] = i;
 	i++;
