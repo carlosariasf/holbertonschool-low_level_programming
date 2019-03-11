@@ -1,0 +1,6 @@
+#define B "Hello, Holberton" 
+/**
+ *
+ *
+ *
+**/
