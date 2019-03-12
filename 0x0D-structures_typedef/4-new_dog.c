@@ -1,6 +1,19 @@
 #include "dog.h"
 #include <stdlib.h>
 /**
+ * size_string - Array
+ * @str: Size of array
+ * Return: Size string
+**/
+int size_string(char *str)
+{
+int i;
+
+for (i = 0; str[i] != '\0'; i++)
+;
+return (i);
+}
+/**
  * *new_dog - Dog
  * @ : struct
  * @name: char
@@ -8,31 +21,38 @@
  * @owner: char
  * Return: pointer
 **/
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
+
 dog_t *d;
+char *sname;
+char *sowner;
+
 d = malloc(sizeof(dog_t));
 if (d == NULL)
 	return (NULL);
 
-d->name = malloc(sizeof(char *));
-if (d -> name == NULL)
+sname = malloc(sizeof(char) * size_string(name) + 1);
+if (sname == NULL)
 {
-	free(d->name);
+	free(sname);
 	free(d);
 	return (NULL);
 }
-	d->name = name;
+	sname = name;
+	d->name = sname;
 d->age = age;
-d->owner = malloc(sizeof(char *));
-if (d ->owner == NULL )
+sowner = malloc(sizeof(char) * size_string(owner) + 1);
+if (sowner == NULL )
 {
-	free(d->owner);
+	free(sowner);
 	free(d->name);
 	free(d);
 	return (NULL);
 }
-	d->owner = owner;
+	sowner = owner;
+	d->owner = sowner;
 
 return (d);
 }
