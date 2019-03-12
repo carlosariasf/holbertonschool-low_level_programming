@@ -17,7 +17,7 @@ if (age != age)
 {
 }
 else
-{	
+{
 	d->age = age;
 }
 if (owner != NULL)
