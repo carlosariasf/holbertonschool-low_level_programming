@@ -13,8 +13,13 @@ if (d != NULL)
 {
 if (name != NULL)
 	d->name = name;
-if (age == age)
+if (age != age)
+{
+}
+else
+{	
 	d->age = age;
+}
 if (owner != NULL)
 	d->owner = owner;
 }
