@@ -60,7 +60,7 @@ d->age = age;
 d->owner = _strdup(owner);
 if (d->owner == NULL)
 {
-	if( d->name != NULL)
+	if (d->name != NULL)
 	{
 	free(d->name);
 	}
