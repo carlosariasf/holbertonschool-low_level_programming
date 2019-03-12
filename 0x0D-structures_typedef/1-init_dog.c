@@ -11,14 +11,8 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 {
 if (name != NULL)
 	d->name = name;
-else
-	d->name = "";
-if (age != age)
-	d->age = 0.0;
-else
+if (age == age)
 	d->age = age;
 if (owner != NULL)
 	d->owner = owner;
-else
-	d->owner = "";
 }
