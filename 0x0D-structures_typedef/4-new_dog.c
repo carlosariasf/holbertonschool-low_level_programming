@@ -55,4 +55,3 @@ if (sowner == NULL )
 	d->owner = sowner;
 
 return (d);
-}
