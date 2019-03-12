@@ -1,17 +1,37 @@
 #include "dog.h"
 #include <stdlib.h>
 /**
- * size_string - Array
- * @str: Size of array
- * Return: Size string
-**/
-int size_string(char *str)
+ * _strdup - description
+ * @str: pointer
+ *
+ *
+ * Return: Nothing.
+ */
+char *_strdup(char *str)
 {
-int i;
+	char *str1;
+	int leng;
 
-for (i = 0; str[i] != '\0'; i++)
-;
-return (i);
+	str1 = str;
+	if (str != NULL)
+	{
+		for (leng = 0; str1[leng] != '\0'; leng++)
+		{
+		}
+		leng = leng + 1;
+		str1 = malloc(sizeof(char) * leng);
+		if (str1 == NULL)
+		{
+			return (NULL);
+		}
+		else
+		{
+			for (leng = 0; str[leng] != '\0'; leng++)
+				str1[leng] = str[leng];
+			return (str1);
+		}
+	}
+	return (NULL);
 }
 /**
  * *new_dog - Dog
@@ -33,25 +53,22 @@ d = malloc(sizeof(dog_t));
 if (d == NULL)
 	return (NULL);
 
-sname = malloc(sizeof(char) * size_string(name) + 1);
+sname = _strdup(name);
 if (sname == NULL)
 {
-	free(sname);
 	free(d);
 	return (NULL);
 }
-	sname = name;
 	d->name = sname;
 d->age = age;
-sowner = malloc(sizeof(char) * size_string(owner) + 1);
+sowner = _strdup(owner);
 if (sowner == NULL )
 {
-	free(sowner);
 	free(d->name);
 	free(d);
 	return (NULL);
 }
-	sowner = owner;
 	d->owner = sowner;
 
 return (d);
+}
