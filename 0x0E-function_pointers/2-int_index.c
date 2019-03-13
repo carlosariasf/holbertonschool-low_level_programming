@@ -25,6 +25,6 @@ if (array && cmp)
 	}
 }
 else
-	return (0);
+	return (-1);
 return (k);
 }
