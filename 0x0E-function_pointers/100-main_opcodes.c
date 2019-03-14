@@ -10,19 +10,19 @@ void main(int ac, char *av[])
 {
 int i = atoi(av[1]);
 
-if (ac != 2)
+if (ac == 2)
 {
-printf("%0x", i);
+	printf("%01x\n", i);
 }
 else if (i < 0)
 {
-printf("Error\n");
+	printf("Error\n");
 exit(1);
 }
 else
 {
-printf("Error\n");
-exit(2);
+	printf("Error\n");
+	exit(2);
 }
 
 }
