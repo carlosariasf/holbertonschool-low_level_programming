@@ -34,12 +34,14 @@ return (diff);
 **/
 int op_mul(int a, int b)
 {
-if (x < y)
-	return (product(y, x));
-else if (y != 0)
-	return (x + product(x, y - 1));
-else
-	return (0);
+int i, result = 0;
+
+for(i = 0; i < a; i++)
+{
+	result = result + b;
+}
+
+return (result);
 }
 /**
  * op_div - int
