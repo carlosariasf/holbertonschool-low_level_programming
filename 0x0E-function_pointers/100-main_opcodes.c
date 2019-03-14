@@ -20,7 +20,4 @@ else if (ac != 2)
 	printf("Error\n");
 	exit(2);
 }
-for(j = 0; j < i; j++)	
-	printf("%0x ", i+j);
-printf("\n");
 }
