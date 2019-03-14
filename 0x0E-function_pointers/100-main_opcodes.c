@@ -8,21 +8,19 @@
 **/
 void main(int ac, char *av[])
 {
-int i = atoi(av[1]);
+int i = atoi(av[1]), j;
 
-if (ac == 2)
-{
-	printf("%01x\n", i);
-}
-else if (i < 0)
+if (i <= 0)
 {
 	printf("Error\n");
-exit(1);
+	exit(1);
 }
-else
+else if (ac != 2)
 {
 	printf("Error\n");
 	exit(2);
 }
-
+for(j = 0; j < i; j++)	
+	printf("%0x ", i+j);
+printf("\n");
 }
