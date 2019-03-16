@@ -1,63 +1,67 @@
 #include <stdio.h>
 #include <stdarg.h>
-
-char op_char(char a)
+/**
+ * print_newline - Print , and \n
+ * @a: char
+**/
+void print_newline(char a)
 {
-printf("%c", a);
+	switch (a)
+	{
+	case('\0'):
+	printf("\n");
+	break;
+	default:
+	printf(", ");
+	break;
 }
 
-typedef struct op
-{
-    char *op;
-    int (*f)(int a);
-} op_t;
-
-op_t ops[] = {
-{"c", op_char},
-{"i", op_int},
-{"f", op_float},
-{"s", op_string},
-{NULL, NULL}
-};
-
+}
 /**
- * print_numbers - Function
- * @separator: char
- * @n: unsigned int
- * Return: sum of values
+ * print_all - Function
+ * @format: const char * const
+ *
+ *
 **/
 void print_all(const char * const format, ...)
 {
-va_list valisti;
-unsigned int i;
-char *q;
+va_list print;
+int i = 0;
+char *p;
+char v;
 
-va_start(valisti, format);
-
-while (va_arg(valisti, char *) != ops[i])
-	i++;
-
-/**
-if (separator)
+va_start(print, format);
+while (format[i])
 {
-	for (i = 0; i < n; i++)
+v = format[i];
+	if (v == 'c' || v == 'i' || v == 'f' || v == 's')
 	{
-		q = va_arg(valisti, char *);
-		if (q != NULL)
+		switch (format[i])
 		{
-			printf("%s", q);
-			if (i < (n - 1))
-				printf("%s", separator);
+		case('c'):
+		printf("%c", va_arg(print, int));
+		break;
+		case('i'):
+		printf("%i", va_arg(print, int));
+		break;
+		case('f'):
+		printf("%f", va_arg(print, double));
+		break;
+		case('s'):
+		p = va_arg(print, char *);
+			if (p)
+			{
+			printf("%s", p);
+			break;
+			}
+			printf("%p", p);
+			break;
+			default:
+			break;
 		}
-		else
-			printf("%p", q);	
+	print_newline(format[i + 1]);
 	}
+i++;
 }
-
-else
-	for (i = 0; i < n; i++)
-		printf("%s", va_arg(valisti, char *));
-printf("%c", '\n');
-**/
-va_end(valisti);
+va_end(print);
 }
