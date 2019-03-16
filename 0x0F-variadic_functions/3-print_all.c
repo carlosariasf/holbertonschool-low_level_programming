@@ -14,7 +14,7 @@ void print_newline(char a)
 	default:
 		printf(", ");
 		break;
-	}	
+	}
 
 }
 /**
@@ -30,8 +30,8 @@ int i = 0;
 char *p;
 
 va_start(print, format);
-while (format && format[i])
-{
+	while (format && format[i] != '\0')
+	{
 		switch (format[i])
 		{
 		case('c'):
@@ -57,7 +57,7 @@ while (format && format[i])
 			continue;
 		}
 	print_newline(format[i + 1]);
-i++;
-}
+	i++;
+	}
 va_end(print);
 }
