@@ -9,12 +9,12 @@ void print_newline(char a)
 	switch (a)
 	{
 	case('\0'):
-	printf("\n");
-	break;
+		printf("\n");
+		break;
 	default:
-	printf(", ");
-	break;
-}
+		printf(", ");
+		break;
+	}	
 
 }
 /**
@@ -28,39 +28,35 @@ void print_all(const char * const format, ...)
 va_list print;
 int i = 0;
 char *p;
-char v;
 
 va_start(print, format);
-while (format[i])
+while (format && format[i])
 {
-v = format[i];
-	if (v == 'c' || v == 'i' || v == 'f' || v == 's')
-	{
 		switch (format[i])
 		{
 		case('c'):
-		printf("%c", va_arg(print, int));
-		break;
+			printf("%c", va_arg(print, int));
+			break;
 		case('i'):
-		printf("%i", va_arg(print, int));
-		break;
+			printf("%i", va_arg(print, int));
+			break;
 		case('f'):
-		printf("%f", va_arg(print, double));
-		break;
+			printf("%f", va_arg(print, double));
+			break;
 		case('s'):
-		p = va_arg(print, char *);
+			p = va_arg(print, char *);
 			if (p)
 			{
-			printf("%s", p);
-			break;
+				printf("%s", p);
+				break;
 			}
 			printf("%p", p);
 			break;
-			default:
-			break;
+		default:
+			i++;
+			continue;
 		}
 	print_newline(format[i + 1]);
-	}
 i++;
 }
 va_end(print);
