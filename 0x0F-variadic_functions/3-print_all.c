@@ -1,23 +1,6 @@
 #include <stdio.h>
 #include <stdarg.h>
 /**
- * print_newline - Print , and \n
- * @a: char
-**/
-void print_newline(char a)
-{
-	switch (a)
-	{
-	case('\0'):
-		printf("\n");
-		break;
-	default:
-		printf(", ");
-		break;
-	}
-
-}
-/**
  * print_all - Function
  * @format: const char * const
  *
@@ -56,8 +39,12 @@ va_start(print, format);
 			i++;
 			continue;
 		}
-	print_newline(format[i + 1]);
+	if (format[i + 1] != '\0')
+	{
+		printf(", ");
+	}
 	i++;
 	}
+printf("\n");
 va_end(print);
 }
