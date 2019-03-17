@@ -5,9 +5,9 @@ SECTION .DATA
 
 ; Code goes in the text section
 SECTION .TEXT
-	GLOBAL _start 
+	GLOBAL main 
 
-_start:
+main:
 	mov eax,4            ; 'write' system call = 4
 	mov ebx,1            ; file descriptor 1 = STDOUT
 	mov ecx,hello        ; string to write

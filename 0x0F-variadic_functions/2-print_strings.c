@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 /**
- * print_numbers - Function
+ * print_strings - Function
  * @separator: char
  * @n: unsigned int
  * Return: sum of values
@@ -26,7 +26,7 @@ if (separator)
 				printf("%s", separator);
 		}
 		else
-			printf("%p", q);	
+			printf("%p", q);
 	}
 }
 
