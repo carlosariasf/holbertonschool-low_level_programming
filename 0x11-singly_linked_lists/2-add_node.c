@@ -5,15 +5,17 @@
 #include "lists.h"
 
 /**
- * print_list - List
- * @h: pointer
- *
- * Return: Size
+ * add_node - List
+ * @head: pointer
+ * @str: string
+ * Return: Address of new node
 **/
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new_node;
+
 	new_node = malloc(sizeof(list_t));
+
 	if (new_node != NULL)
 	{
 	new_node->str = strdup(str);
