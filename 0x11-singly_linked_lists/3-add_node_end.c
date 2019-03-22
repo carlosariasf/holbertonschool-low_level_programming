@@ -6,7 +6,7 @@
 
 unsigned int size_string(char *str);
 /**
- * add_node - List
+ * add_node_end - List
  * @head: pointer
  * @str: string
  * Return: Address of new node
@@ -17,7 +17,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	list_t *last_node = *head;
 
 	new_node = malloc(sizeof(list_t));
-	if(new_node == NULL)
+	if (new_node == NULL)
 	{
 		return (NULL);
 	}
@@ -27,7 +27,7 @@ list_t *add_node_end(list_t **head, const char *str)
 		new_node->len = size_string((char *)str);
 		new_node->next = NULL;
 	}
-	if(*head == NULL)
+	if (*head == NULL)
 	{
 		*head = new_node;
 	}
