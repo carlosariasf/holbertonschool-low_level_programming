@@ -16,9 +16,10 @@ list_t *current = head;
 
 while (current != NULL)
 	{
-	current = head;
+	
 	head = head->next;
 	free(current);
+	current = head;
 	}
 }
 
