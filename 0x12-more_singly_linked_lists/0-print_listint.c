@@ -12,8 +12,8 @@ int countN(const listint_t *head);
 size_t print_listint(const listint_t *h)
 {
 int a = 0, b;
+const listint_t *current = h;
 
-	const listint_t *current = h;
 b = countN(h);
 
 	while (a < b)
@@ -40,5 +40,6 @@ int countN(const listint_t *head)
 	count++;
 	current = current->next;
 	}
+
 	return (count);
 }
