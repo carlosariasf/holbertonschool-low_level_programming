@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include <stdarg.h>
-#include <stdio.h>
 #include "lists.h"
 
 int countN(const listint_t *head);
