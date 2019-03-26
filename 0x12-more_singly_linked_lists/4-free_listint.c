@@ -4,7 +4,7 @@
 #include "lists.h"
 
 /**
- * free_list - List
+ * free_listint - List
  * @head: pointer
  *
  * Return : Size
