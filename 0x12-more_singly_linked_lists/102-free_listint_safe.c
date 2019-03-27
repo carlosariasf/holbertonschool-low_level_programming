@@ -17,5 +17,6 @@ free(*h);
 i++;
 }
 
+*h = NULL;
 return (i);
 }
