@@ -3,16 +3,17 @@
 #include "lists.h"
 
 /**
- * find_listint_loop - List
+ * print_listint_safe - List
  * @head: pointer
  * Return: index node
 **/
-listint_t *find_listint_loop(listint_t *head)
+size_t print_listint_safe(const listint_t *head)
 {
-
+unsigned int i;
 while (head)
 {
+i++;
 }
 
-return (head);
+return (i);
 }
