@@ -3,10 +3,9 @@
 #include "lists.h"
 
 /**
- * insert_nodeint_at_index - List
+ * delete_nodeint_at_index - List
  * @head: pointer
- * @idx: index
- * @n: int
+ * @index: index
  * Return: index node
 **/
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
