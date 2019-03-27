@@ -10,9 +10,9 @@
 listint_t *find_listint_loop(listint_t *head)
 {
 
-while (*head)
+while (head)
 {
 }
 
-return (*head);
+return (head);
 }
