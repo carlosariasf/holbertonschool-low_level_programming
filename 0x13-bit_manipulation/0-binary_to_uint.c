@@ -18,14 +18,14 @@ for (n = 0; b[n] != '\0'; n++)
 	if (b[n] != 48 && b[n] != 49)
 		return (0);
 while (b[i])
-	{
+{
 	if (b[i] == 49)
-        {
-	dec_value = (dec_value << 1) | 1;
+	{
+		dec_value = (dec_value << 1) | 1;
 	}
 	else if (b[i] == 48)
 	{
-	dec_value = (dec_value << 1);
+		dec_value = (dec_value << 1);
 	}
 	i++;
 	}
