@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include "holberton.h"
-int _atoi(const char *str);
 /**
  * binary_to_uint - Binary
  * @b: char pointer
@@ -10,30 +9,25 @@ int _atoi(const char *str);
 **/
 unsigned int binary_to_uint(const char *b)
 {
-int base = 1, i = _atoi(b), dec = 0, rem, j = 0;
+int n, i = 0;
+unsigned int dec_value = 0;
 
-while (i > 0)
-{
-	if (b[j] < 47 || b[j] > 58)
+if (b == NULL)
+	return (0);
+for (n = 0; b[n] != '\0'; n++)
+	if (b[n] != 48 && b[n] != 49)
 		return (0);
-	rem = i % 10;
-	dec = dec + rem * base;
-	i = i / 10;
-	base = base * 2;
-	j++;
-}
-return (dec);
-}
-/**
- * _atoi - function
- * @str: string
- * Return: int
-**/
-int _atoi(const char *str)
-{
-unsigned int res = 0, i;
-
-for (i = 0; str[i] != '\0'; ++i)
-	res = res * 10 + str[i] - '0';
-return (res);
+while (b[i])
+	{
+	if (b[i] == 49)
+        {
+	dec_value = (dec_value << 1) | 1;
+	}
+	else if (b[i] == 48)
+	{
+	dec_value = (dec_value << 1);
+	}
+	i++;
+	}
+	return (dec_value);
 }
