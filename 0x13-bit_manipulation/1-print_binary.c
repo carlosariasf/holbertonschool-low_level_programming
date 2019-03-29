@@ -7,7 +7,7 @@
 **/
 void print_binary(unsigned long int n)
 {
-unsigned long int h = n & 1;
+	unsigned long int h = n & 1;
 
 	if (n > 1)
 	{
