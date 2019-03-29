@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * get_binary - first point.
+ * get_bit - first point.
  * @n: pointer to a string.
  * @index: test.
  * Return: test
