@@ -13,7 +13,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 return (count(n ^ m));
 }
 /**
- * clear_bit - fuction
+ * count - fuction
  * @n: int
  * Return: ui
  **/
