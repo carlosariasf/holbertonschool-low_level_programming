@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "holberton.h"
 /**
- * get_bit - first point.
+ * set_bit - first point.
  * @n: pointer to a string.
  * @index: test.
  * Return: test
