@@ -25,7 +25,6 @@ if (errno == EACCES)
 	return (-1);
 if (f == -1)
 	return (-1);
-printf("%d\n", i);
 write(f, text_content, (i + 1));
 close(f);
 
