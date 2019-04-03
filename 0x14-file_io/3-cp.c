@@ -24,14 +24,12 @@ if (ac != 3)
 	exit(97);
 }
 fs = open(av[1], O_RDONLY);
-if (fs == -1)
+rr = read(fs, buffer, 1024);
+if (fs == -1 || rr == -1)
 {
 	dprintf(2, "Error: Can't read from file %s\n", av[1]);
 	exit(98);
 }
-rr = read(fs, buffer, 1024);
-if (rr == -1)
-	return (0);
 close(fs);
 
 fd = open(av[2], O_CREAT | O_RDWR | O_TRUNC, 0664);
