@@ -14,7 +14,7 @@
  */
 int main(int ac, char **av)
 {
-int fs, fd, rr;
+int fs, fd, rr, rw;
 char *buffer;
 
 buffer = malloc(sizeof(char) * 1024);
@@ -35,7 +35,8 @@ if (rr == -1)
 close(fs);
 
 fd = open(av[2], O_CREAT | O_RDWR | O_TRUNC, 0664);
-if (fd == -1)
+rw = write(fd, buffer, rr);
+if (fd == -1 || rw == -1)
 {
 	dprintf(2, "Error: Can't write to %s\n", av[2]);
 	exit(99);
