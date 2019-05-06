@@ -1,57 +1,45 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "lists.h"
-/**
- * insert_dnodeint_at_index - Insert node in nth position of double linkedlist
- * @h: List elements
- * @idx: Position to insert the node
- * @n: Value to insert
- * Return: the address of the new node, or NULL if it failed
- */
-dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
-{
-	unsigned int count = 0;
-	dlistint_t *new, *current = *h;
-
-	new = malloc(sizeof(dlistint_t));
-	if (h == NULL || new == NULL)
-		return (NULL);
-	new->n = n;
-	if (*h == NULL)
+	/**
+	* insert_dnodeint_at_index - inserts a new node at a given position
+	* @h: dlistint_t pointer to head
+	* @idx: index of the new node
+	* @n: data to be filled in the new node
+	* Return: head.
+	*/
+	dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	{
-		new->prev = NULL, new->next = NULL, *h = new;
-		return (new);
-	}
-	while (h != NULL && *h != NULL && current != NULL)
+	dlistint_t *cur_node = *h;
+	dlistint_t *new_node = malloc(sizeof(dlistint_t));
+	
+	if (!h)
+		return (0);
+	if (!new_node)
+		return (0);
+	new_node->n = n;
+	if (!*h)
 	{
-		if (idx == count)
-		{
-			if (idx == 0)
-			{
-				free(new);
-				return (add_dnodeint(h, n));
-			}
-			if (idx > 0 && current->next != NULL)
-			{
-				new->prev = current->prev, current->prev->next = new;
-				new->next = current, current->prev = new;
-				return (new);
-			}
-			if (current->next == NULL)
-			{
-				new->prev = current->prev, current->prev->next = new;
-				current->prev = new, new->next = current;
-				return (new);
-			}
+		new_node->next = NULL;
+		new_node->prev = NULL;
+		*h = new_node;
+		return (new_node);
 		}
-		current = current->next;
-		if (current == NULL)
+	if (idx == 0)
+		return (add_dnodeint(h, n));
+	for (; idx - 1 > 0; idx--)
+	{
+		if (!cur_node)
 		{
-			free(new);
-	                return (NULL);
+			free(new_node);
+			return (0);
 		}
-		count++;
+		cur_node = cur_node->next;
 	}
-	free(new);
-	return (NULL);
-}
+	new_node->next = cur_node->next;
+	if (new_node->next)
+		new_node->next->prev = new_node;
+	new_node->prev = cur_node;
+	cur_node->next = new_node;
+	return (new_node);
+	}
