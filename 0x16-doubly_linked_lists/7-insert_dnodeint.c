@@ -1,15 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "lists.h"
-	/**
-	* insert_dnodeint_at_index - inserts a new node at a given position
-	* @h: dlistint_t pointer to head
-	* @idx: index of the new node
-	* @n: data to be filled in the new node
-	* Return: head.
-	*/
-	dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
-	{
+/**
+ * insert_dnodeint_at_index - Insert node in nth position of double linkedlist
+ * @h: List elements
+ * @idx: Position to insert the node
+ * @n: Value to insert
+ * Return: the address of the new node, or NULL if it failed
+ */
+dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
+{
 	dlistint_t *cur_node = *h;
 	dlistint_t *new_node = malloc(sizeof(dlistint_t));
 	
