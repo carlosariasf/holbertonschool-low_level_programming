@@ -58,13 +58,13 @@ hash_node_t *ht_npa(const char *key, const char *value)
 {
 	hash_node_t *newpair;
 
-	newpair = malloc(sizeof(hash_node_t))
+	newpair = malloc(sizeof(hash_node_t));
 	if (newpair == NULL)
 		return (NULL);
-	newpair->key = strdup(key)
+	newpair->key = strdup(key);
 	if (newpair->key == NULL)
 		return (NULL);
-	newpair->value = strdup(value)
+	newpair->value = strdup(value);
 	if (newpair->value == NULL)
 		return (NULL);
 	newpair->next = NULL;
