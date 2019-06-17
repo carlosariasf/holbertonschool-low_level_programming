@@ -12,7 +12,7 @@ void selection_sort(int *array, size_t size)
 {
 	int flag = 1;
 	size_t i = 0, idx = 0, idx2 = 0, tmp = 0;
-	
+
 	while (flag == 1 && size > 1)
 	{
 		flag = 0;
@@ -36,11 +36,16 @@ void selection_sort(int *array, size_t size)
 		idx = tmp + 1;
 	}
 }
-
+/**
+ * swap_list - Change items
+ * @array: Array
+ * @pos1: Position 1
+ * @pos2: Position 2
+**/
 void swap_list(int *array, int pos1, int pos2)
 {
 	int tmp = array[pos1];
-	
+
 	array[pos1] = array[pos2];
 	array[pos2] = tmp;
 }

@@ -8,8 +8,8 @@ void insertion_sort_list(listint_t **list)
 	listint_t *aux = *list;
 	listint_t *aux2 = NULL;
 
-        while (aux->next != NULL)
-        {
+	while (aux->next != NULL)
+	{
 		if (aux->n > aux->next->n)
 		{
 			swap_node(list, aux, aux->next);
@@ -30,10 +30,15 @@ void insertion_sort_list(listint_t **list)
 			aux = aux->prev;
 		}
 		aux = aux->next;
-        }
+	}
 }
 
-
+/**
+ * swap_node - Change items
+ * @list: Array
+ * @aux1: Position 1
+ * @aux2: Position 2
+**/
 void swap_node(listint_t **list, listint_t *aux1, listint_t *aux2)
 {
 	if (aux1->prev == NULL)
