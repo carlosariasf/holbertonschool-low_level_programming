@@ -8,6 +8,8 @@ void insertion_sort_list(listint_t **list)
 	listint_t *aux = *list;
 	listint_t *aux2 = NULL;
 
+	if (list == NULL)
+		return;
 	while (aux->next != NULL)
 	{
 		if (aux->n > aux->next->n)
