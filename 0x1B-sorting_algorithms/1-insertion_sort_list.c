@@ -14,9 +14,9 @@ void insertion_sort_list(listint_t **list)
 		{
 			swap_node(list, aux, aux->next);
 			print_list(*list);
-			if (aux->next == NULL)
-				return;
 			aux2 = aux->prev;
+			if (aux->next == NULL && aux->prev == NULL)
+				return;
 			while (aux2->prev != NULL)
 			{
 				if (aux2->n < aux2->prev->n)
