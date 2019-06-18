@@ -8,7 +8,7 @@ void insertion_sort_list(listint_t **list)
 	listint_t *aux = *list;
 	listint_t *aux2 = NULL;
 
-	while (aux->next != NULL)
+	while (aux->next != NULL && list != NULL)
 	{
 		if (aux->n > aux->next->n)
 		{
@@ -49,7 +49,7 @@ void swap_node(listint_t **list, listint_t *aux1, listint_t *aux2)
 		aux2->prev = NULL;
 		aux1->next = NULL;
 		aux2->next = aux1;
-		aux2->prev = aux2;
+		aux1->prev = aux2;
 	}
 	else if (aux1->prev == NULL)
 	{
