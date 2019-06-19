@@ -33,8 +33,7 @@ void shell_sort(int *array, size_t size)
 				seq = seq / 3;
 				i = -1, tmp = seq, flag = 0;
 			}
-			if (seq > 1)
-				print_array(array, size);
+			print_array(array, size);
 		}
 	}
 }
