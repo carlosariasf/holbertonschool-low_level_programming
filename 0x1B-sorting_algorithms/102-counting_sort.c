@@ -1,6 +1,4 @@
 #include "sort.h"
-#include <stdlib.h>
-#include <stdio.h>
 
 /**
  * counting_sort - Algorithm counting sort
