@@ -30,4 +30,9 @@ int lomuto(int *array, int low_pos, int high_pos, size_t size);
 void counting_sort(int *array, size_t size);
 void shell_sort(int *array, size_t size);
 void cocktail_sort_list(listint_t **list);
+int *merge_sort2(int *array, size_t size);
+int *merge(int *new_arr1, int *new_arr2, int *new_arr3);
+void quick_sort_hoare(int *array, size_t size);
+void quick_sort_hoare2(int *array, int low_pos, int high_pos, size_t size);
+int hoare(int *array, int low_pos, int high_pos, size_t size);
 #endif
