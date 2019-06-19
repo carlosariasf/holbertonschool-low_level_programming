@@ -1,10 +1,8 @@
 #include "sort.h"
-#include <stdio.h>
 /**
- *
- *
- *
- *
+ * shell_sort - Shell sort algorithm
+ * @array: Array of numbers
+ * @size: size of array
 **/
 void shell_sort(int *array, size_t size)
 {
