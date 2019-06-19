@@ -6,7 +6,7 @@
 **/
 void shell_sort(int *array, size_t size)
 {
-	int sizet = 0, n = 0, i = 0, tmp = 0, flag = 0;
+	int sizet = 0, n = 1, i = 0, tmp = 0, flag = 0;
 
 	if ((int)size < 2)
 		return;
