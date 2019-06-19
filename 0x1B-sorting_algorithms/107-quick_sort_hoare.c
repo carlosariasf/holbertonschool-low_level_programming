@@ -1,5 +1,4 @@
 #include "sort.h"
-#include <stdio.h>
 
 /**
  * quick_sort_hoare - Algorithm quick_sort
