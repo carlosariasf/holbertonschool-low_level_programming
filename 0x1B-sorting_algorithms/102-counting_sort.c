@@ -13,7 +13,7 @@ void counting_sort(int *array, size_t size)
 	int i, range, j, a, pos;
 
 	range = 0;
-	if (size > 2)
+	if (size > 1)
 	{
 		for (i = 0; i < (int)size; i++)
 			if (array[i] > range)
