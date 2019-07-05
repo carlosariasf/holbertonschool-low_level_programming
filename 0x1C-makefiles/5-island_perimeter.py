@@ -14,8 +14,10 @@ def island_perimeter(grid):
             if grid[y][x] is 1:
                 pos.append(x)
                 pos.append(y)
-    square = (len(pos) / 2) * 4
-    for k in range(len(pos) - 2):
-        if pos[k] == pos[k + 2]:
-            sum += 2
-    return(int(square - sum))
+    if len(pos) is not 0:
+        square = (len(pos) / 2) * 4
+        for k in range(len(pos) - 2):
+            if pos[k] == pos[k + 2]:
+                sum += 2
+        square = int(square - sum)
+    return(square)
