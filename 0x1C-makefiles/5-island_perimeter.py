@@ -6,18 +6,19 @@
 def island_perimeter(grid):
     """Calculate the perimeter of island
     """
-    square = 0
     sum = 0
-    pos = []
-    for y in range(len(grid)):
-        for x in range(len(grid[y])):
+    sides = 0
+    for y in range(0, len(grid)):
+        for x in range(0, len(grid[y])):
             if grid[y][x] is 1:
-                pos.append(x)
-                pos.append(y)
-    if len(pos) is not 0:
-        square = (len(pos) / 2) * 4
-        for k in range(len(pos) - 2):
-            if pos[k] == pos[k + 2]:
-                sum += 2
-        square = int(square - sum)
-    return(square)
+                if y > 0 and grid[y - 1][x]:
+                    sides += 1
+                if x > 0 and grid[y][x - 1]:
+                    sides += 1
+                if y < (len(grid) - 1) and grid[y + 1][x]:
+                    sides += 1
+                if x < (len(grid[0]) - 1) and grid[y][x + 1]:
+                    sides += 1
+                sum += 4 - sides
+            sides = 0
+    return sum
