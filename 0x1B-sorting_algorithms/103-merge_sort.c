@@ -8,7 +8,7 @@
  */
 void merge_sort(int *array, size_t size)
 {
-	if (size > 2)
+	if (size > 1)
 		merge_sort2(array, size);
 }
 

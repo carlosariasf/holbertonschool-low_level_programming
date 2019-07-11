@@ -10,7 +10,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	int idx = 0;
 	hash_node_t *npa = NULL, *next = NULL, *last = NULL;
-
+	
+	if (key[0] == '\0')
+	{
+		freememo(ht);
+		return (0);
+	}
 	idx = key_index((const unsigned char *)key, ht->size);
 	next = ht->array[idx];
 	while (next != NULL && next->key != NULL && strcmp(key, next->key) > 0)
@@ -20,7 +25,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	if (next != NULL && next->key != NULL && strcmp(key, next->key) == 0)
 	{
-
 		free(next->value);
 		next->value = strdup(value);
 		return (1);
@@ -46,6 +50,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			return (1);
 		}
 	}
+	freememo(ht);
+	free(ht);
 	return (0);
 }
 /**
@@ -63,10 +69,16 @@ hash_node_t *ht_npa(const char *key, const char *value)
 		return (NULL);
 	newpair->key = strdup(key);
 	if (newpair->key == NULL)
+	{
+		free(newpair);
 		return (NULL);
+	}
 	newpair->value = strdup(value);
 	if (newpair->value == NULL)
+	{
+		free(newpair);
 		return (NULL);
+	}
 	newpair->next = NULL;
 
 	return (newpair);

@@ -24,3 +24,16 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	return (htable);
 }
+/**
+ *
+ *
+ *
+ *
+**/
+void freememo(const hash_table_t *ht)
+{
+        unsigned long int i;
+
+        for (i = 0; i < ht->size; i++)
+                free(ht->array[i]);
+}

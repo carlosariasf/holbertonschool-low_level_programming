@@ -6,17 +6,17 @@
 **/
 void shell_sort(int *array, size_t size)
 {
-	int sizet = 0, n = 1, i = 0, tmp = 0, flag = 0;
+	int n = 1, i = 0, flag = 0, tmp = 0;
 
 	if (size > 1)
 	{
-		sizet = (int) size - 1;
-		while (n < sizet / 2)
+		size = size - 1;
+		while (n < (int) size / 2)
 		{
 			n = n * 3 + 1;
 		}
 		tmp = n;
-		for (i = 0; tmp <= sizet; i++)
+		for (i = 0; tmp <= (int) size; i++)
 		{
 			if (array[i] > array[tmp])
 			{
@@ -24,16 +24,16 @@ void shell_sort(int *array, size_t size)
 				flag = 1;
 			}
 			tmp++;
-			if (flag == 1 && tmp == sizet + 1)
+			if (flag == 1 && tmp == (int) size + 1)
 				i = -1, tmp = n, flag = 0;
-			if (flag == 0 && tmp == sizet + 1)
+			if (flag == 0 && tmp == (int) size + 1)
 			{
 				if (n > 1)
 				{
 					n = n / 3;
 					i = -1, tmp = n, flag = 0;
 				}
-				print_array(array, size);
+				print_array(array, size + 1);
 			}
 		}
 	}

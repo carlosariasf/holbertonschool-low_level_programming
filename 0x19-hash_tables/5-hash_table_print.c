@@ -5,9 +5,15 @@
 **/
 void hash_table_print(const hash_table_t *ht)
 {
+	unsigned long int count = 0;
+	hash_node_t *tmp = NULL;
 
-	while (ht)
+	while (tmp && count < ht->size)
 	{
-		printf(ht->size);
+		tmp = ht->array[count];
+		if (tmp != NULL && tmp->key != NULL)
+			printf("%s:%s\n", tmp->key, tmp->value);
+		tmp = tmp->next;
+		count ++;
 	}
 }
