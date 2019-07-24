@@ -1,0 +1,63 @@
+#include "binary_trees.h"
+/**
+ * binary_tree_height = Create node
+ * @parent: Pointer to parent
+ * @value: value of node
+ * Return: Pointer to new node
+**/
+int left(const binary_tree_t *tree)
+{
+	if (!tree)
+		return (0);
+	/*left(tree->right);
+	if (tree->left == NULL)
+		left(tree->left);
+	if (tree->left == NULL && tree->right == NULL)*/
+	if (tree->left == NULL && tree->right == NULL)
+	{
+		;
+	}
+	if (tree->left != NULL)
+		return (left(tree->left)+ 1);
+	if (tree->right != NULL)
+		return (left(tree->right));
+	return(left(tree->left));
+}
+
+int right(const binary_tree_t *tree)
+{
+	if (!tree)
+		return (0);
+	/*right(tree->right);
+	if (tree->right == NULL)
+		right(tree->right);
+	if (tree->left != NULL && tree->right != NULL)
+	if(tree->right == NULL)
+		return (right(tree->right));
+	return (right(tree->right) + 1);*/
+	if (tree->left == NULL && tree->right == NULL)
+	{
+		;
+        }
+	if (tree->left != NULL)
+                return (left(tree->left));
+        if (tree->right != NULL)
+                return (left(tree->right)+ 1);
+        return(left(tree->right));
+}
+
+int binary_tree_is_full(const binary_tree_t *tree)
+{
+	int a = 0, b = 0, sum = 0;
+ 
+	sum += left(tree) + right(tree);
+	printf("%d", sum);
+	return (0);
+	if (a == b && (a != 0 && b != 0))
+		return (1);
+	if (a == (b - 2))
+		return (1);
+	if ((a - 2) == b)
+		return (1);
+	return (0);
+}
