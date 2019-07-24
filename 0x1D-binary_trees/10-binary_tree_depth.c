@@ -1,8 +1,7 @@
 #include "binary_trees.h"
 /**
- * binary_tree_height = Create node
- * @parent: Pointer to parent
- * @value: value of node
+ * binary_tree_depth - Create node
+ * @tree: Pointer to parent
  * Return: Pointer to new node
 **/
 size_t binary_tree_depth(const binary_tree_t *tree)
