@@ -1,9 +1,8 @@
 #include "binary_trees.h"
 /**
- * binary_tree_is_lef = Create node
- * @parent: Pointer to parent
- * @value: value of node
- * Return: Pointer to new node
+ * binary_tree_is_leaf - Create node
+ * @node: Pointer to parent
+ * Return: 1 or 0
 **/
 int binary_tree_is_leaf(const binary_tree_t *node)
 {

@@ -1,6 +1,6 @@
 #include "binary_trees.h"
 /**
- * binary_tree_insert_left = Create node
+ * binary_tree_insert_left - Create node
  * @parent: Pointer to parent
  * @value: value of node
  * Return: Pointer to new node
