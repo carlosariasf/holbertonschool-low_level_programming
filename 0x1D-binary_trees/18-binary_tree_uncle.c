@@ -1,9 +1,8 @@
 #include "binary_trees.h"
 /**
- * binary_tree_postorder = Create node
- * @parent: Pointer to parent
- * @value: value of node
- * Return: Pointer to new node
+ * binary_tree_uncle - search the uncle
+ * @node: the node
+ * Return: the uncle
 **/
 binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 {

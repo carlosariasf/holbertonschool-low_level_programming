@@ -1,9 +1,8 @@
 #include "binary_trees.h"
 /**
- * binary_tree_height = Create node
- * @parent: Pointer to parent
- * @value: value of node
- * Return: Pointer to new node
+ * left - count the left side of the tree
+ * @tree: binary tree
+ * Return: number of left nodes
 **/
 int left(const binary_tree_t *tree)
 {
@@ -15,7 +14,11 @@ int left(const binary_tree_t *tree)
 		return (0);
 	return (left(tree->left) + 1);
 }
-
+/**
+ * right - count the right side of the tree
+ * @right: binary tree
+ * Return: number of nodes of the right sides
+**/
 int right(const binary_tree_t *tree)
 {
 	if (!tree)
@@ -26,14 +29,17 @@ int right(const binary_tree_t *tree)
 		return (0);
 	return (right(tree->right) + 1);
 }
-
+/**
+ * binary_tree_is_perfect - perfect of the binary tree
+ * @tree: binary tree
+ * Return: 1 or 0
+**/
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	int a = 0, b = 0;
- 
+
 	a = left(tree);
 	b = right(tree);
-	printf("%d %d\n", a, b);
 	if (a == b)
 		return (1);
 	return (0);
