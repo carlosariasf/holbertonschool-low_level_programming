@@ -4,3 +4,6 @@
 [submodule "0x1D-binary_trees"]
 	path = 0x1D-binary_trees
 	url = https://github.com/carlosariasf/Binary_trees.git
+[submodule "0x1D-binary_treesvim"]
+	path = 0x1D-binary_treesvim
+	url = https://github.com/carlosariasf/Binary_trees
