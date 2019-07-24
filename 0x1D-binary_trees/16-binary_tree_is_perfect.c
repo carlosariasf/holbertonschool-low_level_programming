@@ -16,7 +16,7 @@ int left(const binary_tree_t *tree)
 }
 /**
  * right - count the right side of the tree
- * @right: binary tree
+ * @tree: binary tree
  * Return: number of nodes of the right sides
 **/
 int right(const binary_tree_t *tree)

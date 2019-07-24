@@ -1,9 +1,8 @@
 #include "binary_trees.h"
 /**
- * binary_tree_postorder = Create node
- * @parent: Pointer to parent
- * @value: value of node
- * Return: Pointer to new node
+ * binary_tree_leaves - select the leaves
+ * @tree: binary tree
+ * Return: the number of leaves
 **/
 size_t binary_tree_leaves(const binary_tree_t *tree)
 {

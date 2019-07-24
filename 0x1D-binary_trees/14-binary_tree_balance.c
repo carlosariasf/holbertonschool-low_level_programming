@@ -1,9 +1,8 @@
 #include "binary_trees.h"
 /**
- * binary_tree_height = Create node
- * @parent: Pointer to parent
- * @value: value of node
- * Return: Pointer to new node
+ * left - number of nodes
+ * @tree: binary tree
+ * Return: left nodes
 **/
 int left(const binary_tree_t *tree)
 {
@@ -17,7 +16,11 @@ int left(const binary_tree_t *tree)
 		return (0);
 	return (left(tree->left) + 1);
 }
-
+/**
+ * right - number of nodes
+ * @tree: binary tree
+ * Return: right nodes
+**/
 int right(const binary_tree_t *tree)
 {
 	if (!tree)
@@ -30,7 +33,11 @@ int right(const binary_tree_t *tree)
 		return (0);
 	return (right(tree->right) + 1);
 }
-
+/**
+ * binary_tree_balance - balances
+ * @tree: binary tree
+ * Return: the balance
+**/
 int binary_tree_balance(const binary_tree_t *tree)
 {
 	int a = 0, b = 0;
