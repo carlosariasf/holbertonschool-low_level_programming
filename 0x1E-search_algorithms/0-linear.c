@@ -1,9 +1,9 @@
 #include "search_algos.h"
 /**
- * linear_Search - linear search algorithm
- * array: List
- * size: size of array
- * value: value to search
+ * linear_search - linear search algorithm
+ * @array: List
+ * @size: size of array
+ * @value: value to search
  * Return: index of coincidence or -1
  */
 int linear_search(int *array, size_t size, int value)

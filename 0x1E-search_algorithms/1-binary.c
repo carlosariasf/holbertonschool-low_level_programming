@@ -1,12 +1,12 @@
 #include "search_algos.h"
 /**
- * binary_Search - binary search algorithm
+ * binary_search - binary search algorithm
  * @array: List
  * @size: size of array
  * @value: value to search
  * Return: index of coincidence or -1
  */
-int binary_search(int *array, size_t size, int value) 
+int binary_search(int *array, size_t size, int value)
 {
 	size_t left = 0;
 	size_t right = size - 1;
@@ -21,7 +21,7 @@ int binary_search(int *array, size_t size, int value)
 		if (array[pos] < value)
 			left = pos + 1;
 		else if (array[pos] > value)
-			right = pos -1;
+			right = pos - 1;
 		else
 			return (pos);
 	}
@@ -45,6 +45,6 @@ void printer(int *array, size_t start, size_t finish)
 			printf(", ");
 		else
 			printf("\n");
-	}	
+	}
 }
 
