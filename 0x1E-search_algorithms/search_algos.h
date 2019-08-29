@@ -1,6 +1,7 @@
 #ifndef __SEARCH__
 #define __SEARCH__
 #include <stdio.h>
+#define MIN(X, Y) (((X) < (Y)) ? (X) : (Y))
 /**
  * struct listint_s - singly linked list
  *
@@ -36,6 +37,7 @@ typedef struct skiplist_s
 	struct skiplist_s *express;
 } skiplist_t;
 
+size_t sqr(size_t n);
 void printer(int *array, size_t start, size_t finish);
 int linear_search(int *array, size_t size, int value);
 int binary_search(int *array, size_t size, int value);
