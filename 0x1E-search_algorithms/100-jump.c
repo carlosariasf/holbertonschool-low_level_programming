@@ -8,20 +8,20 @@
  */
 int jump_search(int *array, size_t size, int value)
 {
-	size_t idx = 0;
-	size_t b = sqr(size);
+	size_t idx = 0, b = sqr(size);
 
 	if (!array)
 		return (-1);
 	while (array[MIN(b, size) - 1] < value)
 	{
 		printf("Value checked array[%d] = [%d]\n", (int)idx, array[idx]);
-		idx = b;
-		b = b + sqr(size);
+		idx = b, b = b + sqr(size);
 		if (idx > size)
 		{
-			printf("Value found between indexes [%d] and [%d]\n", (int)(idx - sqr(size)), (int)idx);
-			printf("Value checked array[%d] = [%d]\n", (int)(idx - sqr(size)), array[idx - sqr(size)]);
+			printf("Value found between indexes [%d] and [%d]\n",
+				(int)(idx - sqr(size)), (int)idx);
+			printf("Value checked array[%d] = [%d]\n",
+				(int)(idx - sqr(size)), array[idx - sqr(size)]);
 			return (-1);
 		}
 	}
@@ -29,21 +29,20 @@ int jump_search(int *array, size_t size, int value)
 	{
 		idx = idx + 1;
 		if (idx == MIN(b, size))
-		{
 			return (-1);
-		}
 	}
 	if (array[idx] == value)
 	{
 		if (idx > sqr(size))
 		{
-			printf("Value found between indexes [%d] and [%d]\n", (int)(idx - sqr(size)), (int)(b - sqr(size)));
-			printer(array, (idx - sqr(size)), (b - sqr(size))+ 1);
+			printf("Value found between indexes [%d] and [%d]\n",
+				(int)(idx - sqr(size)), (int)(b - sqr(size)));
+			printer(array, (idx - sqr(size)), (b - sqr(size)) + 1);
 		}
 		else if (idx < sqr(size))
 		{
-			printf("Value found between indexes [%d] and [%d]\n", (int)idx - 1, (int)b);
-			printer(array, idx - 1, b - 1);
+			printf("Value found between indexes [%d] and [%d]\n",
+				(int)idx - 1, (int)b), printer(array, idx - 1, b - 1);
 		}
 		return ((int) idx);
 	}
