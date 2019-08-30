@@ -10,14 +10,14 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 	int i = 0;
 
 	if (!list)
-		return (-1);
-	while (list)
+		return (NULL);
+	while (list->next)
 	{
-		printf("Value checked array[%d] = [%d]\n", i, (int)list->index);
-		if (list->index == value)
-			return (&list);
-		list->next;
+		printf("Value checked array[%d] = [%d]\n", i, (int)list->n);
+		if ((int)list->n == value)
+			return (list);
+		list = list->next;
 		i++;
 	}
-	return (-1);
+	return (NULL);
 }
