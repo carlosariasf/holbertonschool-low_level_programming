@@ -1,12 +1,12 @@
 #include "search_algos.h"
 /**
- * advanced_search - binary search algorithm
+ * advanced_binary - binary search algorithm
  * @array: List
  * @size: size of array
  * @value: value to search
  * Return: index of coincidence or -1
  */
-int advanced_search(int *array, size_t size, int value)
+int advanced_binary(int *array, size_t size, int value)
 {
 	size_t left = 0;
 	size_t right = size - 1;
@@ -47,4 +47,3 @@ void printer(int *array, size_t start, size_t finish)
 			printf("\n");
 	}
 }
-
