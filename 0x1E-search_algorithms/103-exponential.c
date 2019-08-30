@@ -2,7 +2,8 @@
 /**
  * binary_search2 - binary search algorithm
  * @array: List
- * @size: size of array
+ * @l: left size of array
+ * @r: right size of array
  * @value: value to search
  * Return: index of coincidence or -1
  */
@@ -28,7 +29,7 @@ int binary_search2(int *array, size_t l, size_t r, int value)
 	return (-1);
 }
 /**
- * interpolation_search - interpolation search algorithm
+ * exponential_search - exponential search algorithm
  * @array: List
  * @size: size of array
  * @value: value to search
@@ -51,7 +52,7 @@ int exponential_search(int *array, size_t size, int value)
 	}
 	printf("Value found between indexes [%d] and [%d]\n",
 		(int)bound / 2, (int)MIN(bound, size - 1));
-	return binary_search2(array, bound/2, MIN(bound + 1, size), value);
+	return (binary_search2(array, bound / 2, MIN(bound + 1, size), value));
 }
 /**
  * printer - print array
